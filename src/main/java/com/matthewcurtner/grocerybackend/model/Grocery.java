@@ -1,11 +1,10 @@
 package com.matthewcurtner.grocerybackend.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
-@Table("grocery")
+@Entity
 public class Grocery {
-
     @Id
     private int id;
     private String name;
@@ -16,15 +15,7 @@ public class Grocery {
     private String volumeCurrency;
     private String store;
 
-    public Grocery(int id) {
-        this.id = id;
-        this.name = "item1";
-        this.imageUrl = "some image url";
-        this.price = "1,00";
-        this.currency = "Kč";
-        this.volumePrice = "11,45";
-        this.volumeCurrency = "Kč/1 ks";
-        this.store = "StoreName";
+    public Grocery() {
     }
 
     public int getId() {
@@ -89,5 +80,19 @@ public class Grocery {
 
     public void setStore(String store) {
         this.store = store;
+    }
+
+    @Override
+    public String toString() {
+        return "Grocery{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", price='" + price + '\'' +
+                ", currency='" + currency + '\'' +
+                ", volumePrice='" + volumePrice + '\'' +
+                ", volumeCurrency='" + volumeCurrency + '\'' +
+                ", store='" + store + '\'' +
+                '}';
     }
 }

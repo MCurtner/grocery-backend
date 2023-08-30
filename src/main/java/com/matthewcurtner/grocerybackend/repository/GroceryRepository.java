@@ -1,7 +1,7 @@
 package com.matthewcurtner.grocerybackend.repository;
 
 import com.matthewcurtner.grocerybackend.model.Grocery;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface GroceryRepository extends CrudRepository<Grocery, Integer> {
+public interface GroceryRepository extends JpaRepository<Grocery, Integer> {
 }
