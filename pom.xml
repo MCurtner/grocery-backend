@@ -10,11 +10,11 @@
 	</parent>
 	<groupId>com.matthewcurtner</groupId>
 	<artifactId>grocery-backend</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>grocery-backend</name>
 	<description>Grocery backend project for Spring Boot</description>
 	<properties>
-		<java.version>20</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
